@@ -1,0 +1,208 @@
+<html>
+    <head>
+        <script>
+            function Booking2() {
+                var Firstname = 
+                    document.forms["RegForm"]["FirstName"];
+                var Lastname = 
+                    document.forms["RegForm"]["LastName"];
+                var email = 
+                    document.forms["RegForm"]["EMailAddress"];
+                var phone = 
+                    document.forms["RegForm"]["ContactNo"];
+                var Address = 
+                    document.forms["RegForm"]["Address"];
+                var CNIC = 
+                    document.forms["RegForm"]["CNIC"];
+                var Type = 
+                    document.forms["RegForm"]["EventType"];
+                var Seats = 
+                    document.forms["RegForm"]["Seats"];
+                var Date = 
+                    document.forms["RegForm"]["Date"];
+                var Starting_Time = 
+                    document.forms["RegForm"]["Starting_Time"];
+                var Ending_Time = 
+                    document.forms["RegForm"]["Ending_Time"];
+                var Venue = 
+                    document.forms["RegForm"]["Venue"];
+                var Payment = 
+                    document.forms["RegForm"]["PaymentType"];
+  
+                if (Firstname.value == "") {
+                    window.alert("Please enter your Firstname.");
+                    Firstname.focus();
+                    return false;
+                }
+
+                if (Lastname.value == "") {
+                    window.alert("Please enter your Lastname.");
+                    Lastname.focus();
+                    return false;
+                }
+  
+                if (Address.value == "") {
+                    window.alert("Please enter your address.");
+                    Address.focus();
+                    return false;
+                }
+  
+                if (email.value == "") {
+                    window.alert("Please enter a valid e-mail address.");
+                    email.focus();
+                    return false;
+                }
+  
+                if (phone.value == "") {
+                    window.alert("Please enter your telephone number.");
+                    phone.focus();
+                    return false;
+                }
+  
+                if (CNIC.value == "") {
+                    window.alert("Please enter your password");
+                    CNIC.focus();
+                    return false;
+                }
+  
+                if (Type.selectedIndex < 1) {
+                    alert("Please enter your EventType.");
+                    Type.focus();
+                    return false;
+                }
+
+                if (Seats.value == "") {
+                    window.alert("Please enter no of seats you want");
+                    Seats.focus();
+                    return false;
+                }
+
+                if (Date.value == "") {
+                    window.alert("Please enter the date of event");
+                    Date.focus();
+                    return false;
+                }
+
+                if (Starting_Time.value == "") {
+                    window.alert("Please enter the starting time of event");
+                    Starting_Time.focus();
+                    return false;
+                }
+
+                if (Ending_Time.value == "") {
+                    window.alert("Please enter the ending time of event");
+                    Ending_Time.focus();
+                    return false;
+                }
+
+                if (Venue.value == "") {
+                    window.alert("Please enter the event venue");
+                    Venue.focus();
+                    return false;
+                }
+
+                if (Payment.value == "") {
+                    window.alert("Please select the payment method");
+                    Payment.focus();
+                    return false;
+                }
+  
+                return true;
+            }
+        </script>
+  
+        <style>
+            div {
+                box-sizing: border-box;
+                width: 100%;
+                border: 100px solid black;
+                float: left;
+                align-content: center;
+                align-items: center;
+            }
+  
+            form {
+                margin: 0 auto;
+                width: 600px;
+            }
+
+           
+        </style>
+    </head>
+  
+    <body>
+        <h1 style="text-align: center;">BOOKING FORM</h1>
+        <form name="RegForm" action="/submit2.php" 
+              onsubmit="return Booking2()" method="post">
+
+
+            <p>FirstName: <input type="text" 
+                            size="65" name="FirstName" /></p>
+            <br />
+
+            <p>LastName: <input type="text" 
+                size="65" name="LastName" /></p>
+            <br />
+
+            <p>Address: <input type="text" 
+                               size="65" name="Address" />
+          </p>
+            <br />
+            <p>Email: <input type="text" 
+                            size="65" name="EMail" /></p>
+            <br />
+
+            <p>Phone: <input type="text" 
+                size="65" name="PhoneNo" /></p>
+            <br />
+
+            <p>CNIC: <input type="text" 
+                         size="65" name="CNIC" /></p>
+            <br />
+            <p>No of Seats: <input type="text" 
+                        size="65" name="Seats" /></p>
+            <br />
+
+            <p>Date: <input type="text" 
+                size="65" name="Date" /></p>
+            <br />
+
+            <p>Starting Time: <input type="text" 
+                size="65" name="Time" /></p>
+            <br />
+
+            <p>Ending Time: <input type="text" 
+                size="65" name="Time" /></p>
+            <br />
+
+            <p>Venue: <input type="text" 
+                size="65" name="Venu" /></p>
+            <br />
+  
+            <p>
+                Select Your Event Type:
+                <select type="text" value="" name="EventType">
+                    <option>Birthday</option>
+                    <option>Wedding</option>
+                    <option>Dinner</option>
+                    <option>Hi-tea</option>
+                    
+                </select>
+            </p>
+            <br />
+            <br />
+            <p>
+                Select Your Payment Method:
+                <select type="text" value="" name="PaymentType">
+                    <option>Online payment through easy paisa</option>
+                    <option>On spot Payment</option>
+                    
+                </select>
+            </p>
+            <p>
+                <button class ="BOOK">BOOK</button> 
+               
+            </p>
+        </form>
+    </body>
+</html>
